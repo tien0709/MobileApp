@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 import React, { Component } from 'react';
-import { recipes, categories, ingredients } from './dataArrays';
+import { locations, categories, ingredients } from './dataArrays';
 
 export function getCategoryById(categoryId) {
   let category;
@@ -50,6 +50,16 @@ export function getRecipes(categoryId) {
     }
   });
   return recipesArray;
+}
+
+export function getLocations(categoryId) {
+  const locationsArray = [];
+  locations.map(data => {
+    if (data.categoryId == categoryId) {
+      locationsArray.push(data);
+    }
+  });
+  return locationsArray;
 }
 
 // modifica

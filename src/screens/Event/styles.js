@@ -6,10 +6,11 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    marginTop: 0,
+    marginTop: 110,
+    paddingTop: 10,
     flex: 1,
-    backgroundColor: '#FEFCFC',
-
+    borderTopWidth: 2,
+    borderTopColor: '#70AEFF'
   },
 
   searchContainer: { 
@@ -37,18 +38,12 @@ const styles = StyleSheet.create({
 
   SpecialEventContainer: {
     margin: 10,
+    height: 250,
+    borderRadius: 20,
+    borderWidth:1,
+    borderColor: '#cccccc',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 250,
-    borderColor: '#cccccc',
-    borderWidth: 1,
-    borderRadius: 20,
-    backgroundColor: "#fdfdfd",
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.4,
-    shadowRadius: 4,
-    elevation: 5, // Cho Android để hiển thị bóng đổ
   },
 
   eventItemContainer: {
@@ -58,21 +53,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 250,
     borderColor: '#cccccc',
-    borderWidth: 1,
+    borderWidth: 0.5,
     borderRadius: 20,
     width: 300,
     backgroundColor: "#fdfdfd",
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.4,
-    shadowRadius: 4,
-    elevation: 5, // Cho Android để hiển thị bóng đổ
   },
 
 
   eventPhoto: {
     width: '100%',
-    height: 132,
+    height: 155,
     borderRadius: 20,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
@@ -96,19 +86,6 @@ const styles = StyleSheet.create({
        fontSize: 20,
        margin: 10,
        fontWeight: 'bold',
-  },
-
-  TextViewAll: {
-    fontSize: 20,
-    margin: 10,
-    marginRight: 20,
-    fontWeight: 'bold',
-    color : '#6499E9',
-  },
-
-  textRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
 
   logo: {

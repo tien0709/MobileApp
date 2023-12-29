@@ -3,10 +3,13 @@ import { StyleSheet, Dimensions } from 'react-native';
 const { width: viewportWidth } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+  Viewcontainer: {
+    flex: 1,
+  },
   container: {
     backgroundColor: 'white',
     flex: 1,
-    marginTop: 100,
+    marginTop: 110,
     paddingTop: 30,
     borderTopWidth: 2,
     borderTopColor: '#70AEFF'

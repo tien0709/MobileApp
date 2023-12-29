@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createDrawerNavigator} from '@react-navigation/drawer' 
 import HomeScreen from '../screens/Home/HomeScreen';
 import CategoriesScreen from '../screens/Categories/CategoriesScreen';
-import InfoFaculityScreen from '../screens/Falculity/FaculityScreen';
+import LocationsScreen from '../screens/Locations/LocationsScreen';
+import LocationScreen from '../screens/Location/LocationScreen';
 import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 import IngredientScreen from '../screens/Ingredient/IngredientScreen';
@@ -13,7 +14,13 @@ import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsD
 import SplashScreen from '../screens/Splash/SplashScreen';
 import LoginScreen from '../screens/login/LogInScreen';
 import SignUpScreen from '../screens/register/SignUpScreen';
-import NavigationFromHomeScreen from  '../screens/NavigationFromHome/NavigationFromHome'
+import DiscoveryScreen from  '../screens/Discovery/DiscoveryScreen';
+import QRScreen from  '../screens/QR/QRScreen';
+import ContributeScreen from  '../screens/Contribute/ContributeScreen';
+import ForumScreen from  '../screens/Forum/ForumScreen';
+import EventScreen from  '../screens/Event/EventScreen';
+import EventsScreen from  '../screens/Events/EventsScreen';
+import QRCreateScreen from  '../screens/QRCreate/QRCreateScreen';
  const Stack = createStackNavigator();
 
 function MainNavigator() {
@@ -36,18 +43,67 @@ function MainNavigator() {
       options={{ headerShown: false }}/> 
       <Stack.Screen name='Home' component={HomeScreen} />
       <Stack.Screen name='Categories' component={CategoriesScreen}/>
-      <Stack.Screen name='Falculity' component={InfoFaculityScreen}
+      <Stack.Screen name='Locations' component={LocationsScreen}
         options={{
           headerShown: true,
           headerTitle: '',
         }}
       />
-      <Stack.Screen name='NavigationFromHome' component={NavigationFromHomeScreen}
+      <Stack.Screen name='Location' component={LocationScreen}
         options={{
           headerShown: true,
           headerTitle: '',
         }}
       />
+      <Stack.Screen name='QR' component={QRScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Contribute' component={ContributeScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Forum' component={ForumScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Discovery' component={DiscoveryScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='QRCreate' component={QRCreateScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Event' component={EventScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Events' component={EventsScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
       <Stack.Screen name='RecipesList' component={RecipesListScreen} />
       <Stack.Screen name='Ingredient' component={IngredientScreen} />
       <Stack.Screen name='Search' component={SearchScreen} />

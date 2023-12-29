@@ -105,6 +105,9 @@ const styles = StyleSheet.create({
   },
 
   buttonFacebookContainer: {
+    flexDirection: "row", 
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: 40,
     width: '80%', // Độ rộng cố định của ô nhập Email
     height: '4%',
@@ -121,6 +124,9 @@ const styles = StyleSheet.create({
   },
 
   buttonGoogleContainer: {
+    flexDirection: "row", 
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: 20,
     width: '80%', // Độ rộng cố định của ô nhập Email
     height: '4%',

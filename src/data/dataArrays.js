@@ -1,38 +1,98 @@
 export const categories = [
   {
     id: 3,
-    name: 'Falculity',
+    name: 'FALCULITY',
     photo_url:
     'https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/405148384_819284853334361_3102177833254712666_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=783fdb&_nc_ohc=bo3G-aIKLiAAX8A_sbt&_nc_ht=scontent-hkg1-1.xx&oh=00_AfBPAKW3_HEKJUs1gqMVfKWt9KArqiXFiAhm9f-5NPBnLw&oe=658B1434'
   },
   {
     id: 1,
-    name: 'Library',
+    name: 'LIBRARY',
     photo_url: 'https://thanhnien.mediacdn.vn/Uploaded/haanh/2022_06_29/img-0130-398.jpg'
   },
   {
     id: 2,
-    name: 'Canteen',
+    name: 'CANTEEN',
     photo_url:
       'https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/350821100_1610564479410814_547538279037796489_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=8gXjhEm9BIMAX-2Zu3j&_nc_ht=scontent-hkg4-1.xx&oh=00_AfDPh25KmpyYt3KmD838IexQwtdWNm_4vLTzZzI2dWerfg&oe=658AA69E'
   },
   {
     id: 4,
-    name: 'Hall',
+    name: 'HALL',
     photo_url:
     'https://media-cdn-v2.laodong.vn/storage/newsportal/2021/9/15/954009/DH-BK-TPHCM.jpeg?w=660'
   },
   {
     id: 0,
-    name: 'Research Center',
+    name: 'RESEARCH CENTER',
     photo_url: 'http://cms.dientoanbachkhoa.vn/Upload/64TLDO6ST67NM4ZLFPNE.jpg'
   },
 ];
 
-export const recipes = [
+export const categories_2 = [
   {
-    recipeId: 122,
-    categoryId: 3,
+    id: 0,
+    name: 'Khoa và Trung tâm đào tạo',
+    icon: 'building',
+    photo_url:
+    'https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/405148384_819284853334361_3102177833254712666_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=783fdb&_nc_ohc=bo3G-aIKLiAAX8A_sbt&_nc_ht=scontent-hkg1-1.xx&oh=00_AfBPAKW3_HEKJUs1gqMVfKWt9KArqiXFiAhm9f-5NPBnLw&oe=658B1434'
+  },
+  {
+    id: 1,
+    name: 'Thư viện',
+    photo_url: 'https://thanhnien.mediacdn.vn/Uploaded/haanh/2022_06_29/img-0130-398.jpg',
+    icon: 'book-open'
+  },
+  {
+    id: 2,
+    name: 'Nhà ăn',
+    photo_url:
+      'https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/350821100_1610564479410814_547538279037796489_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=8gXjhEm9BIMAX-2Zu3j&_nc_ht=scontent-hkg4-1.xx&oh=00_AfDPh25KmpyYt3KmD838IexQwtdWNm_4vLTzZzI2dWerfg&oe=658AA69E',
+    icon: 'coffee',   
+  
+  },
+  {
+    id: 3,
+    name: 'Hội trường',
+    photo_url:
+    'https://media-cdn-v2.laodong.vn/storage/newsportal/2021/9/15/954009/DH-BK-TPHCM.jpeg?w=660',
+    icon: 'landmark',
+
+  },
+  {
+    id: 4,
+    name: 'Văn phòng',
+    photo_url: 'http://cms.dientoanbachkhoa.vn/Upload/64TLDO6ST67NM4ZLFPNE.jpg',
+    icon: 'city',
+  },
+
+  {
+    id: 5,
+    name: 'Trung tâm nghiên cứu',
+    photo_url: 'http://cms.dientoanbachkhoa.vn/Upload/64TLDO6ST67NM4ZLFPNE.jpg',
+    icon: 'lightbulb',
+  },
+
+  {
+    id: 6,
+    name: 'Sân vận động',
+    photo_url: 'http://cms.dientoanbachkhoa.vn/Upload/64TLDO6ST67NM4ZLFPNE.jpg',
+    icon: 'football-ball',
+  },
+
+  {
+    id: 7,
+    name: 'Địa điểm khác',
+    photo_url: 'http://cms.dientoanbachkhoa.vn/Upload/64TLDO6ST67NM4ZLFPNE.jpg',
+    icon: 'comment-dots',
+  },
+
+];
+
+export const locations = [
+  {
+    Id: 0,
+    categoryId: 0,
     title: 'KHOA CƠ KHÍ',
     photo_url: 'http://www.aao.hcmut.edu.vn/image/data/khoa/khoacokhi.jpg',
 
@@ -42,14 +102,12 @@ export const recipes = [
       'https://static.ttbc-hcm.gov.vn/w815/images/upload/04082020/bachkhoa_ldhb_9d726ca2_61bb42e4.jpg',
       'https://ims.baohoabinh.com.vn/NewsImg/4_2010/42937_1.jpg'
     ],
-    time: '15',
-    ingredients: [[0, '200ml'], [1, '5g'], [2, '300g']],
     description:
       "-- Chương trình đào tạo Kỹ sư Cơ khí, được xây dựng theo hướng kỹ thuật, đào tạo kỹ sư cơ khí có năng lực chuyên môn để giải quyết những vấn đề liên quan đến thiết kế, chế tạo và vận hành các hệ thống sản xuất công nghiệp, có khả năng thích nghi và áp dụng các công nghệ tiên tiến của khu vực và thế giới nhằm phục vụ sự nghiệp công nghiệp hóa và hiện đại hóa đất nước; có phẩm chất chính trị, đạo đức và sức khoẻ tốt. Ngành Kỹ thuật Cơ khí gồm có 3 chuyên ngành đào tạo: Kỹ thuật Chế tạo, Kỹ thuật Thiết kế, Kỹ thuật Máy xây dựng và nâng chuyển. Triển vọng nghề nghiệp: Kỹ sư ngành kỹ thuật cơ khí có thể làm việc ở bất kỳ nơi nào có liên quan đến máy móc, thiết bị. Sinh viên tốt nghiệp ngành kỹ thuật cơ khí có thể đảm nhiệm những vị trí như: Kỹ sư chế tạo, kỹ sư thiết kế, kỹ sư điều hành sản xuất, kỹ sư chất lượng, kỹ sư bảo trì, kỹ sư nghiên cứu và phát triển, kỹ sư cung ứng, kỹ sư bán hàng, giảng viên, .. Những công ty thường tuyển dụng kỹ sư ngành kỹ thuật cơ khí tốt nghiệp từ trường Đại học Bách khoa Tp.HCM: Công ty Trường Hải, công ty Máy và Thiết bị công nghiệp, công ty Vinamilk, công ty xây dựng Sài gòn, công ty cổ phần Acecook, công ty TNHH cơ khí Duy Khanh,… Các kỹ sư sau khi tốt nghiệp sẽ được các nhà tuyển dụng quan tâm cao và sẽ thành công trong nhiều lĩnh vực khác nhau. Cơ hội nghề nghiệp bao gồm các công việc về thiết kế,sản xuất, quản lý, vận hành, bảo trì, bảo dưỡng, … các máy móc, thiết bị trong các nhà máy sản xuất như: hệ thống nâng vận chuyển trong hệ thống dây chuyền tự động, nhà máy sản xuất vật liệu xây dựng (nhà máy xi măng, máy sàng, máy nghiền, máy trộn...), nhà máy sản xuất vật liệu và cấu kiện xây dựng (cột bê tông, ống cống,…) và trong các lĩnh vực máy thi công cơ giới và máy chuyên dụng (máy xúc, máy ủi, máy nạo vét ..."
   },
   {
-    recipeId: 3,
-    categoryId: 3,
+    Id: 1,
+    categoryId: 0,
     title: 'KHOA MÁY TÍNH',
     photo_url:
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khohtmt.jpg',
@@ -59,17 +117,11 @@ export const recipes = [
       'https://www.facebook.com/photo/?fbid=615318603535298&set=a.615318573535301',
       'https://image-us.eva.vn/upload/3-2023/images/2023-08-24//x-large/1692842906-khoa-hoc-may-tinh-197.jpeg'
     ],
-    time: '10',
-    ingredients: [
-      [59, '1'],
-      [60, '1/2 lbs'],
-      [61, '1/2 liters'],
-    ],
     description: '-- Chuyên ngành Máy tính được đào tạo rất sớm tại Trường Đại học Bách Khoa bắt đầu từ năm 1977. Hiện tại Khoa Khoa học và Kỹ thuật Máy tính là một khoa đi đầu trong lĩnh vực công nghệ thông tin tại Việt Nam và hiện có các chương trình đào tạo và nghiên cứu chuyên sâu ở các bậc đại học, thạc sĩ, và tiến sĩ.Khoa Khoa học và Kỹ thuật Máy tính đào tạo kỹ sư ở bậc đại học đạt chuẩn quốc tế ABET (http://www.abet.org/) trong 2 ngành Khoa học Máy tính (Computer Science) và Kỹ thuật Máy tính (Computer Engineering). Đây là hai chương trình đầu tiên và duy nhất hiện tại ở Việt Nam đạt chuẩn quốc tế ABET của Hoa Kỳ mà các công ty hàng đầu thế giới như Intel, IBM, Boeing mong muốn. Trong hai ngành Khoa học Máy tính và Kỹ thuật Máy tính có các hướng đào tạo chuyên môn về  Kỹ thuật phần mềm, Hệ thống thông tin, Bảo mật mạng & dữ liệu, Cấu trúc Máy tính & Thiết kế vi mạch, Mạng máy tính, Tính toán hiệu năng cao & dữ liệu siêu lớn.Khoa Khoa học và Kỹ thuật Máy tính có sứ mệnh bồi dưỡng và đào tạo kỹ sư, chuyên gia và các nhà nghiên cứu đạt chuẩn quốc tế, cung cấp kỹ sư và nhà nghiên cứu chất lượng cao cho cả nước và khu vực phía Nam trong lĩnh vực khoa học và kỹ thuật máy tính làm việc cho doanh nghiệp, các cơ sở đào tạo, góp phần phát triển khoa học và giáo dục, công nghiệp và kinh tế Việt Nam. Tỉ lệ sinh viên có việc làm là 100%; trong đó một phần sinh viên nhận học bổng tiếp tục học thạc sỹ, tiến sỹ ở nước ngoài.Khoa Khoa học và Kỹ thuật Máy tính xem lực lượng giảng viên là nguồn tài sản quan trọng góp phần đảm bảo chất lượng đào tạo. Hiện tại, phần lớn giảng viên của Khoa có trình độ tiến sỹ tốt nghiệp tại các trường/viện tại Bắc Mỹ, Châu Âu, Úc, và các quốc gia phát triển trong khu vực Châu Á. Hệ thống phòng thí nghiệm được duy trì và thường xuyên nâng cấp nhằm phục vụ nhu cầu học tập và nghiên cứu. Phòng thí nghiệm Tính toán nâng cao (ACLab) với kinh phí đầu tư 20 tỉ đồng đã vận hành từ năm 2014. Thư viện của Khoa hiện có trên 2000 đầu sách chuyên về khoa học và kỹ thuật máy tính và 02 phòng đọc dành cho cán bộ và sinh viên. Chất lượng đào tạo đạt chuẩn quốc tế là kim chỉ nam của Khoa Khoa học và Kỹ thuật Máy tính!'
   },
   {
-    recipeId: 2,
-    categoryId: 3,
+    Id: 2,
+    categoryId: 0,
     title: 'Khoa Điện - Điện tử',
     photo_url: 'https://oisp.hcmut.edu.vn/wp-content/uploads/2020/06/Khoa-Dien-Dien-tu-Truong-DH-Bach-Khoa.jpg',
     photosArray: [
@@ -78,26 +130,13 @@ export const recipes = [
       'https://huongnghiep.hocmai.vn/wp-content/uploads/2021/12/nu-vien-dien.jpg',
       'https://huongnghiep.hocmai.vn/wp-content/uploads/2021/12/5120_YH_Bach_Khoa.jpg',
     ],
-    time: '30',
-    ingredients: [
-      [0, '2 quarts'],
-      [16, '1'],
-      [12, '1 cup'],
-      [18, '1 cup'],
-      [19, '1 teaspoon'],
-      [1, '2 teaspoons'],
-      [4, '1/4 teaspoons'],
-      [7, '1/8 teaspoons'],
-      [20, '1/2 teaspoons'],
-      [21, '4']
-    ],
     description:
       "-- Được thành lập vào năm 1957, khoa Điện – Điện tử là một trong bốn khoa đầu tiên của Trung tâm kỹ thuật quốc gia Phú Thọ. Hiện nay, với gần 140 giảng viên và hơn 3500 sinh viên các bậc học, khoa Điện – Điện tử trở thành một trong các khoa lớn nhất của Trường Đại học Bách Khoa về số lượng sinh viên, đội ngũ cán bộ và cơ sở vật chất. Khoa đã là nguồn cung cấp cán bộ kỹ thuật góp phần giải quyết các vấn đề khoa học và công nghệ cho cộng đồng doanh nghiệp khu vực thành phố Hồ Chí Minh và đồng bằng sông Cửu Long trong hơn 50 năm qua. Hoạt động đào tạo luôn cập nhật những chương trình đổi mới, sáng tạo của các trường đại học nổi tiếng thế giới nhằm trang bị cho sinh viên kiến thức và kỹ năng phù hợp tập trung trong các lĩnh vực: Điện tử-Viễn thông, Điều khiển Tự động và Hệ thống năng lượng. Khoa cũng khuyến khích việc trao đổi kiến thức, hợp tác và tăng cường mối quan hệ đại học - doanh nghiệp trong đào tạo, nghiên cứu khoa học, ứng dụng công nghệ để đáp ứng nhân lực chất lượng cao cho các ngành này tại Việt Nam với môi trường làm việc đầy thử thách của thế kỷ 21. Thông qua các chiến lược về hoạch định giáo dục theo hướng lấy sinh viên làm trung tâm, Khoa Điện – Điện tử đang trong giai đoạn phát triển lên một cấp độ cao hơn nhằm giảm khoảng cách về tiêu chuẩn đào tạo các ngành thuộc lĩnh vực Điện – Điện tử giữa các trường đại học trong khu vực Đông Nam Á và thế giới.Đễ hỗ trợ cho hoạt động nghiên cứu chuyên môn, khoa đã xây dựng các phòng thí nghiệm nghiên cứu nâng cao với trang thiết bị đa dạng và hiện đại. Bên cạnh các phòng thí nghiệm cấp bộ môn, khoa còn có ba phòng thí nghiệm và xưởng thực hành cấp khoa phục vụ cho việc thực hành và nghiên cứu của sinh viên, cán bộ nghiên cứu và giảng dạy như: phòng máy tính, phòng thí nghiệm máy điện, xưởng điện và xưởng điện tử"
 
   },
   {
-    recipeId: 3,
-    categoryId: 3,
+    Id: 3,
+    categoryId: 0,
     title: 'KHOA KỸ THUẬT HOÁ HỌC',
     photo_url:
       'https://live.staticflickr.com/2891/13707684283_26afd34428_b.jpg',
@@ -107,28 +146,12 @@ export const recipes = [
       'https://live.staticflickr.com/2891/13707684283_26afd34428_b.jpg',
       'https://live.staticflickr.com/2891/13707684283_26afd34428_b.jpg'
     ],
-    time: '45',
-    ingredients: [
-      [0, '2 tablespoons'],
-      [22, '1/2'],
-      [23, '2 tablespoons'],
-      [7, '2 cloves'],
-      [3, '1 teaspoon'],
-      [24, '1 tablespoon'],
-      [25, '1 lb'],
-      [1, '2 teaspoons'],
-      [4, '2 teaspoons'],
-      [26, '15 oz'],
-      [27, '8'],
-      [28, '2'],
-      [29, '1 cup']
-    ],
     description:
       '-- Được thành lập vào năm 1962, Khoa Kỹ thuật hoá học là đơn vị duy nhất ở phía Nam đào tạo Kỹ sư, Thạc sỹ và Tiến sỹ các chuyên ngành Công nghệ hoá học, Công nghệ thực phẩm và Công nghệ sinh học. Nhiệm vụ của khoa là cung cấp nguồn nhân lực kỹ thuật cao, chuyển giao công nghệ trong lĩnh vực công nghệ hoá học, đóng góp vào sự nghiệp công nghiệp hoá, hiện đại hoá đất nước.Hơn 90 cán bộ chuyên môn đầy nhiệt huyết của khoa luôn cố gắng hết mình để hoàn thành xuất sắc nhiệm vụ đào tạo. Với dội ngũ cán bộ nghiên cứu nhiều kinh nghiệm và các nhà khoa học trẻ năng động cùng với hệ thống 9 phòng thí nghiệm hiện đại và 1 trung tâm nghiên cứu, rất nhiều công trình nghiên cứu đã được tiến hành và ứng dụng thành công tại khu vực Đồng bằng sông Cửu Long. Để đáp ứng được các tiêu chuẩn quốc tế, khoa Hoá không ngừng nâng cao năng lực tạo điều kiện tốt nhất cho sinh viên tiếp cận chương trình đào tạo chuyên nghiệp, cơ hội thực nghiệm trong phòng thí nghiệm, tích luỹ kinh nghiệm thực tế thông qua các chuyến thực tập. Sinh viên khoa Kỹ thuật Hoá học có nhiều cơ hội học tập nâng cao trình độ ở nước ngoài nhờ vào các mối quan hệ hợp tác mật thiết với nhiều doanh nghiệp và trường đại học danh tiếng trên thế giới.'
   },
   {
-    recipeId: 1,
-    categoryId: 3,
+    Id: 4,
+    categoryId: 0,
     title: 'KHOA QUẢN LÝ CÔNG NGHIỆP',
     photo_url: 'https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/387832908_799476588855299_4244017434122759740_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=5_T1aZLLcEMAX8v5NAy&_nc_oc=AQnSkk3EUEnWA3UL4_VskaYapHZ9o_TbAQzZRbbmIfuEI8H_R-Z9l2cpokS8eqlKMSY&_nc_ht=scontent-hkg4-1.xx&oh=00_AfCPsx_k_q1j0SdWucS_gX_UjlB8snazGXLFjct2jfUPHw&oe=658B74D0',
     photosArray: [
@@ -137,31 +160,12 @@ export const recipes = [
       'https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/387832908_799476588855299_4244017434122759740_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=5_T1aZLLcEMAX8v5NAy&_nc_oc=AQnSkk3EUEnWA3UL4_VskaYapHZ9o_TbAQzZRbbmIfuEI8H_R-Z9l2cpokS8eqlKMSY&_nc_ht=scontent-hkg4-1.xx&oh=00_AfCPsx_k_q1j0SdWucS_gX_UjlB8snazGXLFjct2jfUPHw&oe=658B74D0',
       'https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/387832908_799476588855299_4244017434122759740_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=5_T1aZLLcEMAX8v5NAy&_nc_oc=AQnSkk3EUEnWA3UL4_VskaYapHZ9o_TbAQzZRbbmIfuEI8H_R-Z9l2cpokS8eqlKMSY&_nc_ht=scontent-hkg4-1.xx&oh=00_AfCPsx_k_q1j0SdWucS_gX_UjlB8snazGXLFjct2jfUPHw&oe=658B74D0'
     ],
-    time: '30',
-    ingredients: [
-      [1, '2 tablespoons'],
-      [3, '1 tablespoon'],
-      [4, '1 teaspoon'],
-      [5, '1/2 teaspoons'],
-      [6, '1/2 teaspoons'],
-      [7, '1/2 teaspoons'],
-      [8, '1/2 teaspoons'],
-      [9, '1/2 teaspoons'],
-      [10, '1/2 teaspoons'],
-      [11, '1/2 teaspoons'],
-      [12, '1/2 cups'],
-      [13, '1 tablespoon'],
-      [14, '1 tablespoon'],
-      [15, '2 breasts, 2 thighs, 2 drumsticks, 2 wings'],
-      [16, '1'],
-      [17, '2 quarts']
-    ],
     description:
       '-- Nhằm góp phần đáp ứng nhu cầu ngày càng cao trong lĩnh vực đào tạo của các nhà quản lý ở Việt Nam, năm 1993, trường ĐHBK Tp.HCM đã thành lập Khoa Quản lý công nghiệp (tiền thân là Bộ môn Quản lý công nghiệp). Khoa hiện có các chương trình đào tạo từ cấp bậc đại học đến sau đại học các nhóm ngành Quản lý công nghiệp và Quản lý doanh nghiệp. Bậc đại học: Quản lý công nghiệp (có hệ Đào tạo văn bằng hai), Quản trị kinh doanh. Bậc cao học: Quản trị kinh doanh. Bậc tiến sỹ: Quản trị kinh doanh Ngoài ra, Khoa còn có hai chương trình đào tạo hợp tác quốc tế với Maastricht School of Management (MSM, Hà Lan) và institute of international management Consulting (IMC, CHLB Đức) đào tạo thạc sĩ quản trị kinh doanh (Executive Master of Business Administration) dành cho các nhà quản lý đương nhiệm. Chương trình được giảng dạy hoàn toàn bằng tiếng Anh với các Giàng viên đến từ các trường danh tiếng trên thế giới. Trẻ, tận tụy, năng động, ham học hỏi và thích ứng nhanh là đặc điểm chung của đội ngũ 56 giảng viên của Khoa với hầu hết được đào tạo và tu nghiệp ở các trường và viện đại học nước ngoài (Thái Lan, Úc, Pháp, Hoa Kỳ…).'
   },
   {
-    recipeId: 4,
-    categoryId: 3,
+    Id: 5,
+    categoryId: 0,
     title: 'KHOA KỸ THUẬT XÂY DỰNG',
     photo_url: 'http://www.aao.hcmut.edu.vn/image/data/khoa/kxd.jpg',
     photosArray: [
@@ -169,26 +173,12 @@ export const recipes = [
       'http://www.aao.hcmut.edu.vn/image/data/khoa/kxd.jpg',
       'http://www.aao.hcmut.edu.vn/image/data/khoa/kxd.jpg'
     ],
-    time: '35',
-    ingredients: [
-      [30, 'jucie of 1 '],
-      [24, '2 teaspoons'],
-      [0, '3 tablespoons'],
-      [3, '1 teaspoon'],
-      [31, '1/2 teaspoons'],
-      [32, '1/2 teaspoons'],
-      [4, '2 teaspoons'],
-      [33, '1/2 lb'],
-      [27, '8'],
-      [14, '2 teasponns'],
-      [34, '1']
-    ],
     description:
       '-- Khoa Kỹ thuật xây dựng tiền thân là trường Cao đẳng xây dựng được thành lập vào năm 1911 tại Hà Nội và đến năm 1957, Khoa được đặt tại trung tâm Kỹ thuật Quốc gia Phú Thọ - Sài Gòn. Kể từ đó, Khoa ngày càng khẳng định là trung tâm đào tạo và nghiên cứu xuất sắc trong lĩnh vực Kỹ thuật xây dựng ở Việt Nam.  Khoa đã có nhiều đóng góp quan trọng vào ngành công nghiệp xây dựng và đặc biệt là công cuộc tái xây dựng đất nước sau chiến tranh thông qua các dự án xây dựng đường xá, cầu cống, nhà máy... Hiện nay, Khoa Xây dựng là khoa lớn nhất trường xét về qui mô đào tạo. Vai trò của Khoa là đào tạo các chuyên gia đầu ngành trong lĩnh vực Kỹ thuật xây dựng và tiến hành các đề tài nghiên cứu tiên tiến có tính ứng dụng cao phục vụ xã hội.Gần 200 cán bộ chuyên môn và quản lý tận tụy của Khoa luôn tâm niệm truyền thống: “Vươn tới sự xuất sắc” . Vì vậy, chất lượng đào tạo luôn là mối quan tâm hàng đầu của khoa.Khoa thành lập 7 phòng thí nghiệm trang bị hiện đại, 2 trung tâm nghiên cứu để phục vụ tốt nhất cho sự nghiệp  đào tạo bậc đại học và sau đại học, cho hoạt động nghiên cứu khoa học, chuyển giao công nghệ và cung cấp dịch vụ tư vấn xây dựng cho xã hội.'
   },
   {
-    recipeId: 5,
-    categoryId: 3,
+    Id: 6,
+    categoryId: 0,
     title: 'KHOA KỸ THUẬT GIAO THÔNG',
     photo_url:
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khoa%20ktgt.jpg',
@@ -197,29 +187,12 @@ export const recipes = [
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khoa%20ktgt.jpg',
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khoa%20ktgt.jpg'
     ],
-    time: 35,
-    ingredients: [
-      [9, '1/2 teaspoons'],
-      [0, '4 tablespoons'],
-      [1, '1/2 teaspoons'],
-      [30, '2 tablespoons'],
-      [31, '1 teaspoon'],
-      [7, '1 teaspoon'],
-      [24, '1/2 teaspoons'],
-      [3, '1/2 teaspoons'],
-      [21, '1 pound'],
-      [22, '1/2 cup'],
-      [27, '6'],
-      [36, '4'],
-      [37, '1/2'],
-      [38, '1/2']
-    ],
     description:
       '-- Vào 15/06/2000, Khoa Kỹ thuật Giao thông được thành lập trên cơ sở hợp nhất 3 bộ môn Cơ khí Ô tô, Cơ khí Tàu thủy và Kỹ thuật Ô tô, nhằm đảm nhiệm sứ mệnh quan trọng: “Khoa Kỹ thuật Giao thông – Trường Đại học Bách Khoa Tp. HCM là một trong những trung tâm chuyển giao công nghệ hàng đầu trong lĩnh vực kỹ thuật và quản lý giao thông ở Việt Nam”. Khoa đặt mục tiêu đào tạo và cung cấp nguồn nhân lực với kiến thức chuyên môn vững chắc và kỹ năng chuyên nghiệp để đáp ứng nhu cầu ngày càng tăng cao trong các hoạt động nghiên cứu, phát triển, thiết kế, chế tạo và vận hành các phương tiện giao thông cho khu vực phía Nam và cả nước”. Khoa Kỹ thuật giao thông có 41 cán bộ. Vào năm 2004, bên cạnh các phòng thí nghiệm của từng bộ môn, phòng thí nghiệm động cơ đốt trong với kỹ thuật hiện đại từ AVL List GmbH (Cộng hòa Áo) đã được đưa vào vận hành nhằm phục vụ cho chương trình đào tạo sau đại học, nghiên cứu khoa học và chuyển giao công nghệ.'
   },
   {
-    recipeId: 6,
-    categoryId: 3,
+    Id: 7,
+    categoryId: 0,
     title: 'KHOA KHOA HỌC ỨNG DỤNG',
     photo_url:
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khoakhud.jpg',
@@ -228,29 +201,13 @@ export const recipes = [
       'http://pizzachoicema.com/wp-content/uploads/2018/08/Buffalo-Chicken-Pizza.jpg',
       'https://static1.squarespace.com/static/565bb41ae4b0509ba9fdf769/t/5b9a8e80aa4a998b0be0fcf4/1536855690622/pizza.gif'
     ],
-    time: 50,
-    ingredients: [
-      [39, '1 lb'],
-      [40, '1 cup'],
-      [41, '1/2 cup'],
-      [42, '1/4 cup'],
-      [43, '2 tablespoons'],
-      [44, '1/2 cup'],
-      [7, '1/4 teaspoons'],
-      [5, '1/4 teaspoons'],
-      [30, '1/4 teaspoons'],
-      [45, '2 oz'],
-      [12, 'for dusting'],
-      [4, '1/2 teaspoons'],
-      [47, '2'],
-      [46, '9 oz']
-    ],
+
     description:
       '-- Là một Khoa mới trong hệ thống đào tạo của trường Bách Khoa, Khoa Khoa học Ứng dụng (thành lập năm 2003) ra đời trong nỗ lực đáp ứng nhu cầu ngày càng cao trong lĩnh vực đào tạo đội ngũ chuyên viên cho các lĩnh vực kỹ thuật liên ngành công nghệ cao như: kỹ thuật y sinh, công nghệ quang tử, cơ kỹ thuật, công nghệ nano, tính toán mô phỏng vật liệu…Sứ mệnh của Khoa là đào tạo những kĩ sư có nền tảng khoa học vững chắc để có thể nghiên cứu và làm việc xuất sắc trong lĩnh vực Khoa học Ứng dụng. Bên cạnh sứ mệnh giảng dạy, đội ngũ cán bộ khoa còn đảm nhận vai trò nghiên cứu ứng dụng để cho ra những sản phẩm công nghệ cao đáp ứng nhu cầu thực tiễn của nền công nghiệp mới.Hiện tại Khoa có 4 bộ môn và 7 phòng thí nghiệm với tổng số nhân sự là 45, trong đó có 1 Giáo sư, 5 Phó giáo sư và 39 giảng viên chính. Để hỗ trợ điều kiện thực nghiệm và nhân lực cho hoạt động đào tạo của bộ môn đồng thời triển khai các hoạt động nghiên cứu và chuyển giao công nghệ, Khoa hiện đang có 3 phòng thí nghiệm: Phòng thí nghiệm Công Nghệ Laser, Phòng thí nghiệm Cơ Ứng dụng, Phòng tính toán Cơ học.'
   },
   {
-    recipeId: 0,
-    categoryId: 3,
+    Id: 8,
+    categoryId: 0,
     title: 'KHOA MÔI TRƯỜNG VÀ TÀI NGUYÊN',
     photo_url: 'https://fenr.hcmut.edu.vn/uploads/images/Tin%20tuc/20221009_H2.png',
     photosArray: [
@@ -265,8 +222,8 @@ export const recipes = [
       '-- Tiền thân của Khoa Môi trường hiện nay là Bộ môn Kỹ thuật Môi sinh thuộc Khoa Xây dựng được thành lập vào năm 1981. Đến ngày 28 tháng 9 năm 1999, Bộ môn chính thức trở thành Khoa Môi trường với hai chuyên ngành đào tạo là Kỹ thuật môi trường và Quản lý môi trường. Hiện nay, Khoa là một trong những trung tâm chủ chốt đào tạo đội ngũ kỹ sư, nhà nghiên cứu trong các lĩnh vực thuộc môi trường như quản lý nguồn tài nguyên thiên nhiên, kiểm soát ô nhiễm không khí, xử lý nước thải… cho toàn khu vực miền Nam Việt Nam. hoa hiện có 36 nhân sự bao gồm 3 phó giáo sư, 14 tiến sỹ, 9 thạc sỹ và 8 kỹ sư. Bên cạnh đội ngũ giảng viên chính, Khoa còn mời các giáo sư đầu ngành, các chuyên gia trong nước về kỹ thuật môi trường, quản lý tài nguyên thiên nhiên, quản lý đô thị, kinh tế môi trường, viễn thám, GIS... tham gia giảng dạy và nghiên cứu. Để phục vụ cho công tác đào tạo và nghiên cứu chuyển giao khoa học công nghệ, Khoa đã không ngừng nâng cấp 3 phòng thí nghiệm (PTN) cơ bản: PTN phân tích, PTN mô hình, PTN GIS với những trang thiết bị tiên tiến hiện nay, đặc biệt là PTN GIS với các trang thiết bị Special database, Remote Sensing analysis, GIS data acquisition and data workshop.'
   },
   {
-    recipeId: 7,
-    categoryId: 3,
+    Id: 9,
+    categoryId: 0,
     title: 'KHOA CÔNG NGHỆ VẬT LIỆU',
     photo_url: 'http://www.aao.hcmut.edu.vn/image/data/khoa/khoacongnghevatlieu.jpg',
     photosArray: [
@@ -274,23 +231,12 @@ export const recipes = [
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khoacongnghevatlieu.jpg',
       'http://www.aao.hcmut.edu.vn/image/data/khoa/khoacongnghevatlieu.jpg'
     ],
-    time: 15,
-    ingredients: [
-      [48, '50g'],
-      [49, '100g'],
-      [50, '350g'],
-      [51, '2 plump'],
-      [42, '50g'],
-      [16, '3'],
-      [1, '2 teaspoons'],
-      [4, '2 teaspoons']
-    ],
     description:
       '-- Khoa Công nghệ vật liệu được thành lập tháng 6 năm 2001. Mặc dù là khoa trẻ nhưng Khoa Công nghệ vật liệu đã chứng tỏ là đơn vị nghiên cứu và đào tạo xuất sắc so với các khoa khác của trường. Khoa Công nghệ vật liệu chuyên trách phát triển nguồn nhân lực và công nghệ trong lĩnh vực khoa học và công nghệ vật liệu. Mục tiêu tiên quyết của khoa là trang bị các kỹ năng và kiến thức cơ bản về khoa học và công nghệ vật liệu cho sinh viên, chuẩn bị hành trang nghề nghiệp để sau khi ra trường sinh viên khoa Công nghệ vật liệu có đủ khả năng và bản lĩnh đảm đương các nhiệm vụ nghiên cứu và cải tiến công nghệ vật liệu trong nước. Để đáp ứng nhu cầu phát triển các loại vật liệu mới, Khoa định hướng và thực hiện nhiều công trình nghiên cứu về vật liệu tiên tiến và công nghệ sản xuất mới. Hiện nay, tổng số cán bộ chuyên môn của khoa là 47. Với sự nhiệt tình, sáng tạo và năng động, đội ngũ cán bộ chuyên môn của khoa đang vươn tới mục tiêu phát triển khoa Công nghệ vật liệu thành đơn vị đào tạo và nghiên cứu hàng đầu đất nước về lĩnh vực công nghệ vật liệu. Để hỗ trợ cho hoạt động nghiên cứu và đào tạo, Khoa đã thành lập 5 phòng thí nghiệm trang bị hiện đại có khả năng thực hiện các thí nghiệm và thử nghiệm với các lọai vật liệu và công nghệ tiên tiến. '
   },
   {
-    recipeId: 8,
-    categoryId: 3,
+    Id: 10,
+    categoryId: 0,
     title: 'TRUNG TÂM BẢO DƯỠNG CÔNG NGHIỆP',
     photo_url: 'http://www.aao.hcmut.edu.vn/image/data/khoa/ttbdcn.jpg',
     photosArray: [
@@ -298,29 +244,24 @@ export const recipes = [
       'http://www.aao.hcmut.edu.vn/image/data/khoa/ttbdcn.jpg',
       'http://www.aao.hcmut.edu.vn/image/data/khoa/ttbdcn.jpg'
     ],
-    time: 60,
-    ingredients: [
-      [36, '1 large'],
-      [25, '1 pound'],
-      [51, '5 cloves'],
-      [52, '1 pound'],
-      [53, '1 pound'],
-      [54, '1 28 ounce can'],
-      [23, '2 6 ounce can'],
-      [55, '2 tablespoons'],
-      [56, '1/4 cup'],
-      [10, '1/2 cup'],
-      [1, '1/2 teaspoons'],
-      [58, '1 teaspoon'],
-      [4, '1/4 teaspoons'],
-      [16, '1 large'],
-      [46, '1 pound'],
-      [48, '1 cup'],
-      [57, '30 ounces']
-    ],
     description:
       '-- Trung tâm Đào tạo Bảo dưỡng Công nghiệp (BDCN) thuộc trường Đại học Bách Khoa – ĐHQG TP. HCM, được thành lập năm 1996 theo Quyết định số 169/GD-ĐT. Trung tâm là kết quả của chương trình hợp tác Việt – Pháp “Đào tạo kỹ thuật viên cao cấp” nhằm đáp ứng nhu cầu kỹ nghệ Việt Nam trong lĩnh vực bảo dưỡng công nghiệp. Mô hình đào tạo của Trung tâm có nét tương tự với mô hình đào tạo của các Viện Đại học Công nghệ (Institut Universitaire de Technologie – IUT) ở Pháp.Đội ngũ cán bộ giảng dạy của Trung tâm gồm 02 Tiến sĩ, 06 Thạc sĩ, 07 Kỹ sư và 01 Cử nhân, trong đ  có 02 Thạc sĩ đang làm Nghiên cứu sinh ở nước ngoài. Các cán bộ giảng dạy được đào tạo từ các nguồn khác nhau trong và ngoài nước và đa số đều đã được huấn luyện về thực hành tại IUT Lyon (Pháp). Sau gần 11 năm (1996 – 2007), Trung tâm đã đào tạo được 1.119 sinh viên ngành Bảo dưỡng công nghiệp về cơ điện và điện lạnh. Sinh viên tốt nghiệp từ Trung tâm được trang bị rất tốt các kỹ năng thực hành về điện, điện tử, lập trình PLC (programmable logic control), nhiệt lạnh, thủy lực, khí nén, hàn và lắp ráp cơ khí. Sinh viên có thể tham gia vào quá trình lắp đặt, điều chỉnh, sử dụng và bảo dưỡng các thiết bị công nghiệp nhằm duy trì sản xuất đảm bảo chất lượng và liên tục. Số sinh viên hiện đang theo học tại Trung tâm là 281và sẽ tăng trong các năm tới với việc mở thêm ngành mới Cơ điện tử và sự gia tăng nhu cầu về kỹ thuật viên lành nghề ở lĩnh vực bảo dưỡng công nghiệp tại các nhà máy. Để cập nhật và đổi mới chương trình đào tạo, Trung tâm giữ quan hệ tốt, trao đổi chuyên gia, cập nhật tài liệu, trang bị thêm thiết bị cho giảng dạy thực hành và NCKH với các trường đại học, cao đẳng nước ngoài như IUTB – Universitaire Claude Bernard – Lyon 1, IUT1 – Institut Universitaire de Technologie 1 Grenoble 1, cũng như Trung tâm Đào Tạo Bảo dưỡng Công nghiệp Hà Nội. Trung tâm coi trọng công tác tư vấn kỹ thuật và đào tạo bổ sung cho các cán bộ kỹ thuật ở các đơn vị sản xuất để nâng cao tay nghề trong lĩnh vực chuyên ngành. Thông qua công tác đào tạo bổ sung Trung tâm đã tạo được mối quan hệ chặt chẽ với các đối tác công nghiệp bên ngoài như Xi măng Holcim, Sữa Cô gái Hà Lan – Dutch Lady, Xi măng Hà Tiên I, Unilever Việt Nam, Schlumberger, Khu chế xuất Linh Trung, … nhờ đó tranh thủ được địa điểm thực tập hay tham quan cho sinh viên, học bổng và việc tuyển dụng nhân sự cho sinh viên ra trường. Trong 5 năm gần đây, Trung tâm đã thực hiện được 03 đề tài cấp Trường, 02 đề tài cấp Đại học Quốc gia, 01 đề tài theo chương trình Vườn ươm Công nghệ và 5 đề tài NCKH trẻ. Kết quả các NCKH trên đã được công bố bởi 5 bài báo trình bày tại các hội nghị khoa học. Các cán bộ của Trung tâm có nhiều hợp đồng với các xí nghiệp trong lĩnh vực bảo trì, sửa chữa, thiết kế chế tạo thiết bị công nghiệp. Dưới sự lãnh đạo và quan tâm của Ban giám đốc ĐHQG TP. HCM, của Ban Giám hiệu trường Đại Học Bách Khoa TP. HCM, cùng với sự nỗ lực của Ban Giám đốc và toàn thể cán bộ, Trung tâm Đào tạo Bảo dưỡng Công nghiệp sẽ ngày càng phát triển và thực hiện thành công nhiệm vụ đào tạo nguồn nhân lực có trình độ cao cho xã hội.'
-  }
+  },
+  {
+    Id: 11,
+    categoryId: 1,
+    title: 'THư VIỆN CƠ SỞ 1',
+    photo_url: 'https://www.vnulib.edu.vn/images/doitac/tvbachkhoa.jpg',
+
+    photosArray: [
+      'https://www.vnulib.edu.vn/images/doitac/tvbachkhoa.jpg',
+      'https://oisp.hcmut.edu.vn/wp-content/uploads/Gioi-thieu/Thu-vien_Bach-khoa-2018_08.jpg?_t=1552549103',
+      'https://oisp.hcmut.edu.vn/wp-content/uploads/Gioi-thieu/Thu-vien_Bach-khoa-2018_05.jpg?_t=1552549103',
+      'https://oisp.hcmut.edu.vn/wp-content/uploads/Gioi-thieu/Thu-vien_Bach-khoa-2018_05.jpg?_t=1552549103'
+    ],
+    description:
+      "-- Cơ sở 1: 268 Lý Thường Kiệt, P.14, Quận 10 (Tòa nhà A2). Thứ Hai - Thứ Sáu: Sáng: 7h30 - 11h30, Chiều: 13h00 - 17h00, Phục vụ ngoài giờ (Thứ Hai - Thứ Sáu): Sáng: 11h30 - 13h00 (Phòng đọc Tham Khảo)Chiều: 17h00 - 20h30 (Phòng đọc Tham Khảo)Thứ bảy (Phòng Mượn sách về nhà, Phòng Đọc SĐH)Sáng: 7h30 - 11h30, Chiều: 13h00 - 17h00, Chủ nhật, ngày lễ: nghỉ"
+  },
 ];
 
 export const ingredients = [
@@ -679,3 +620,31 @@ export const ingredients = [
       'http://images.media-allrecipes.com/userphotos/960x960/3758635.jpg'
   },
 ];
+
+
+export const Events = [
+  {
+    id: 0,
+    name: 'Tư vấn chuyên ngành cho Khoa Khoa học và Kĩ thuật máy tính',
+    num: 286,
+    time: '3 ngày',
+    photo_url:
+    'https://imp.hcmut.edu.vn/wp-content/uploads/2021/07/218184023_1565912267079950_6271396965575432400_n.jpg'
+  },
+  {
+    id: 1,
+    name: 'Ngày hội HIẾN MÁU TÌNH NGUYỆN',
+    num: 286,
+    time: '3 ngày',
+    photo_url: 'https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/277770557_3226902850859148_3261793974814644648_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=soYUHZUfGYEAX9AeqPt&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfAngqhZEuceW4IPbRaNTDf2JdpjbpCj5ZCP_pkTnHUxew&oe=658D17B4'
+  },
+  {
+    id: 2,
+    name: 'Ngày hội TƯ VẤN TUYỂN SINH TÌNH NGUYỆN',
+    num: 286,
+    time: '3 ngày',
+    photo_url:
+      'https://scontent-hkg1-1.xx.fbcdn.net/v/t1.6435-9/140146230_10159046229134462_6096409351511490480_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=IwDficHC6OIAX9DrDPs&_nc_ht=scontent-hkg1-1.xx&oh=00_AfDjJtFYI6cPduwMlGUPebfpkR31KKDkPIX7VUd487lNcQ&oe=65AFCA83'
+  },
+];
+

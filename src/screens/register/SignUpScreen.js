@@ -4,7 +4,7 @@ import { Text, TextInput } from 'react-native-paper'
 import styles from "./styles";
 
 import Logo from '../login/logo'
-
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import { emailValidator } from '../../helpers/emailValidator'
 import { passwordValidator } from '../../helpers/passwordValidator'
@@ -83,23 +83,13 @@ export default function SignUpScreen({ navigation }) {
       </View>
       <View style={styles.horizontalLine}></View>
       <View style={styles.buttonFacebookContainer} >
-        <Button style={styles.buttonFb} mode="contained"  title="Continue with Facebook" 
-          icon={{
-            name: "facebook",
-            size: 20,
-            color: "blue",
-          }}
-        >
+        <Icon name = "facebook" color ='white' size ={20}></Icon>
+        <Button style={styles.buttonFb} mode="contained"  title="Continue with Facebook" >
         </Button>
       </View>
       <View style={styles.buttonGoogleContainer} >
-        <Button style={styles.buttonGg} mode="contained"  title="Continue with Google"
-            icon={{
-              name: "google",
-              size: 20,
-              color: "blue",
-            }}
-        >
+        <Icon name = "google" color ='white' size ={20}></Icon>
+        <Button style={styles.buttonGg} mode="contained"  title="Continue with Google">
         </Button>
       </View>
       <View style={styles.row}>

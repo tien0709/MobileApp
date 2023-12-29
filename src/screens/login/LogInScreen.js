@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View,  Button, Image } from 'react-native'
 import { TextInput, Text } from 'react-native-paper'
 import styles from "./styles";
-
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import Logo from '../login/logo'
-
 import { emailValidator } from '../../helpers/emailValidator'
 import { passwordValidator } from '../../helpers/passwordValidator'
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
@@ -75,23 +75,16 @@ export default function LoginScreen({ navigation }) {
       </View>
       <View style={styles.horizontalLine}></View>
       <View style={styles.buttonFacebookContainer} >
-        <Button style={styles.buttonFb} mode="contained"  title="Continue with Facebook" 
-          icon={{
-            name: "facebook",
-            size: 20,
-            color: "blue",
-          }}
-        >
-        </Button>
+        <Icon name = "facebook" color ='white' size ={20}></Icon>
+        <Button
+            style={styles.buttonFb}
+            mode="contained"
+            title="Continue with Facebook"
+        />
       </View>
       <View style={styles.buttonGoogleContainer} >
-        <Button style={styles.buttonGg} mode="contained"  title="Continue with Google"
-            icon={{
-              name: "google",
-              size: 20,
-              color: "blue",
-            }}
-        >
+        <Icon name = "google" color ='white' size ={20}></Icon>
+        <Button style={styles.buttonGg} mode="contained"  title="Continue with Google">
         </Button>
       </View>
       <View style={styles.row}>
