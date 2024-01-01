@@ -26,7 +26,7 @@ const NavigationBar = ({ onPressButton }) => {
             <Text style={styles.text}>Quét mã QR</Text>
        </View>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => onPressButton('Forum')}>
+      <TouchableOpacity style={styles.button} onPress={() => onPressButton('Forums')}>
         <View style={styles.buttonContent}>
             <Icon style={styles.logo} name="comment-alt" size={20} color="#455A64" />
             <Text style={styles.text}>Forum</Text>

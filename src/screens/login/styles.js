@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
   },
   email: {
     width: '100%',
-    padding: 2,
-    color: 'white', // Màu chữ của ô nhập Email
+    padding: 5,
+    color: 'red', // Màu chữ của ô nhập Email
     backgroundColor: '#040832',
     borderColor: '#E0E0E0',
     borderWidth: 1,
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
     fontSize: 10, // Độ lớn của chữ trên button
     color: 'white', // Màu chữ của button
   },
+
 })
 
 export default styles;

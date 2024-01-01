@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, TouchableOpacity, Button } from 'react-native'
+import { View, TouchableOpacity, Button } from 'react-native'
 import { Text, TextInput } from 'react-native-paper'
 import styles from "./styles";
-
+import { addAccount  } from "../../data/MockDataAPI";
 import Logo from '../login/logo'
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-import { emailValidator } from '../../helpers/emailValidator'
-import { passwordValidator } from '../../helpers/passwordValidator'
-import { nameValidator } from '../../helpers/nameValidator'
+import  emailValidator from '../../helpers/emailValidator'
+import  passwordValidator  from '../../helpers/passwordValidator'
+import  nameValidator  from '../../helpers/nameValidator'
 
 export default function SignUpScreen({ navigation }) {
   const [name, setName] = useState({ value: '', error: '' })
@@ -19,12 +19,15 @@ export default function SignUpScreen({ navigation }) {
     const nameError = nameValidator(name.value)
     const emailError = emailValidator(email.value)
     const passwordError = passwordValidator(password.value)
-   // if (emailError || passwordError || nameError) {
-   //   setName({ ...name, error: nameError })
-   //   setEmail({ ...email, error: emailError })
-   //   setPassword({ ...password, error: passwordError })
-   //   return
-   // }
+    if (emailError || passwordError || nameError) {
+      setName({ ...name, error: nameError })
+      setEmail({ ...email, error: emailError })
+      setPassword({ ...password, error: passwordError })
+      return
+    }
+    else {
+      addAccount(name.value, email.value, password.value);
+    }
     navigation.reset({
       index: 0,
       routes: [{ name: 'Login' }],
@@ -52,6 +55,21 @@ export default function SignUpScreen({ navigation }) {
             size: 20,
             color: "blue",
           }}
+        />
+      </View>
+      <View style={styles.nameContainer} >
+        <TextInput
+          style={styles.name}
+          label="Name"
+          returnKeyType="next"
+          value={name.value}
+          onChangeText={(text) => setName({ value: text, error: '' })}
+          error={!!name.error}
+          errorText={name.error}
+          autoCapitalize="none"
+          autoCompleteType="none"
+          textContentType="none"
+          //keyboardType="none"
         />
       </View>
       <View style={styles.passwordContainer}>

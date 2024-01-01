@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
-    marginTop: 110,
+    marginTop: 0,
     paddingTop: 30,
     borderTopWidth: 2,
     borderTopColor: '#70AEFF'

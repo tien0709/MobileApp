@@ -1,6 +1,7 @@
 import { Text } from 'react-native';
 import React, { Component } from 'react';
-import { locations, categories, ingredients } from './dataArrays';
+import { locations, categories, Accounts, Status, Comments, Participants } from './dataArrays';
+import moment from 'moment';
 
 export function getCategoryById(categoryId) {
   let category;
@@ -12,45 +13,6 @@ export function getCategoryById(categoryId) {
   return category;
 }
 
-export function getIngredientName(ingredientID) {
-  let name;
-  ingredients.map(data => {
-    if (data.ingredientId == ingredientID) {
-      name = data.name;
-    }
-  });
-  return name;
-}
-
-export function getIngredientUrl(ingredientID) {
-  let url;
-  ingredients.map(data => {
-    if (data.ingredientId == ingredientID) {
-      url = data.photo_url;
-    }
-  });
-  return url;
-}
-
-export function getCategoryName(categoryId) {
-  let name;
-  categories.map(data => {
-    if (data.id == categoryId) {
-      name = data.name;
-    }
-  });
-  return name;
-}
-
-export function getRecipes(categoryId) {
-  const recipesArray = [];
-  recipes.map(data => {
-    if (data.categoryId == categoryId) {
-      recipesArray.push(data);
-    }
-  });
-  return recipesArray;
-}
 
 export function getLocations(categoryId) {
   const locationsArray = [];
@@ -62,80 +24,89 @@ export function getLocations(categoryId) {
   return locationsArray;
 }
 
-// modifica
-export function getRecipesByIngredient(ingredientId) {
-  const recipesArray = [];
-  recipes.map(data => {
-    data.ingredients.map(index => {
-      if (index[0] == ingredientId) {
-        recipesArray.push(data);
-      }
+export function getUser(idAccount) {
+  
+  const user = Accounts.find(data => data.id == idAccount);
+  return user;
+}
+
+export function getUserbyEmail(email) {
+  
+  const user = Accounts.find(data => data.email == email);
+  return user;
+}
+
+export function getComment(idStatus) {
+  const cmts = [];
+  Comments.map(data => {
+    if (data.idStatus == idStatus) {
+      cmts.push(data);
+    }
+  });
+  return cmts;
+}
+
+export function checkAccount(email, password){
+
+  let check = false;
+  Accounts.map(data => {
+    if (data.email == email && data.pw == password) {
+      check = true;
+    }
+  });
+  return check;
+}
+
+export function addAccount(name, email, password){
+  Accounts.push({
+    id: Accounts.length + 1,
+    name: name,
+    email: email,
+    pw: password,
+    photo_url:'https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png?20140731221454'
+  });
+}
+
+ 
+
+
+export function CreateStatus(content, email) {
+  if (content == '') {
+    alert('Bạn chưa nhập nội dung');
+    return;
+  }
+    const currentTime = moment().format('HH:mm · DD/MM/YY');
+    Status.push({
+      id: Status.length + 1,
+      content: content,
+      idAccount: getUserbyEmail(email).id,
+      time: currentTime,
+      like: 0,
+      cmt: 0,
     });
-  });
-  return recipesArray;
+  alert("Đăng bài thành công");
 }
 
-export function getNumberOfRecipes(categoryId) {
-  let count = 0;
-  recipes.map(data => {
-    if (data.categoryId == categoryId) {
-      count++;
-    }
-  });
-  return count;
-}
+export function addParticipant(email, event) {
+  const user = getUserbyEmail(email)
+  const elementWithIdEvent = Participants.find(item => (item.idAccount === user.id && item.idEvent === event.id));
+  if (elementWithIdEvent) {
+    alert('Bạn đã tham gia hoạt động trước đây!');
+    return;
+  }
 
-export function getAllIngredients(idArray) {
-  const ingredientsArray = [];
-  idArray.map(index => {
-    ingredients.map(data => {
-      if (data.ingredientId == index[0]) {
-        ingredientsArray.push([data, index[1]]);
-      }
+  else if(user.id === 0) {
+    alert('boss đi chỗ khác chơi!');
+    return;
+  }
+  ///const currentTime = moment().format('HH:mm · DD/MM/YY');
+    Participants.push({
+      id: Participants.length,
+      idAccount: user.id,
+      idEvent: event.id,
+      Point: 0,
     });
-  });
-  return ingredientsArray;
+  alert("Đăng kí thành công");
 }
 
-// functions for search
-export function getRecipesByIngredientName(ingredientName) {
-  const nameUpper = ingredientName.toUpperCase();
-  const recipesArray = [];
-  ingredients.map(data => {
-    if (data.name.toUpperCase().includes(nameUpper)) {
-      // data.name.yoUpperCase() == nameUpper
-      const recipes = getRecipesByIngredient(data.ingredientId);
-      const unique = [...new Set(recipes)];
-      unique.map(item => {
-        recipesArray.push(item);
-      });
-    }
-  });
-  const uniqueArray = [...new Set(recipesArray)];
-  return uniqueArray;
-}
 
-export function getRecipesByCategoryName(categoryName) {
-  const nameUpper = categoryName.toUpperCase();
-  const recipesArray = [];
-  categories.map(data => {
-    if (data.name.toUpperCase().includes(nameUpper)) {
-      const recipes = getRecipes(data.id); // return a vector of recipes
-      recipes.map(item => {
-        recipesArray.push(item);
-      });
-    }
-  });
-  return recipesArray;
-}
-
-export function getRecipesByRecipeName(recipeName) {
-  const nameUpper = recipeName.toUpperCase();
-  const recipesArray = [];
-  recipes.map(data => {
-    if (data.title.toUpperCase().includes(nameUpper)) {
-      recipesArray.push(data);
-    }
-  });
-  return recipesArray;
-}

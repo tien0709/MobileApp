@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    marginTop: 0,
+    marginTop:0,
     flex: 1,
-    backgroundColor: '#FEFCFC',
+    backgroundColor: '#fff',
 
   },
 
@@ -94,13 +94,13 @@ const styles = StyleSheet.create({
 
   Text: {
        fontSize: 20,
-       margin: 10,
+       margin: 15,
        fontWeight: 'bold',
   },
 
   TextViewAll: {
     fontSize: 20,
-    margin: 10,
+    margin: 15,
     marginRight: 20,
     fontWeight: 'bold',
     color : '#6499E9',
@@ -112,7 +112,51 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-  }
+  },
+
+  eventContainer: {
+    height: 200,
+    marginHorizontal: 10,
+    marginTop: 10,
+  },
+
+  gradientBorderEvent:{
+    borderRadius: 15, 
+    flexDirection: 'row',
+  },
+  eventText:{
+     margin: 15,
+  },
+
+  eventText1:{
+      fontSize: 20,
+      color: '#0066FF',
+      fontWeight: 'bold',
+      textShadowColor: 'black',
+      textShadowOffset: {
+        width: 1,
+        height: 1,
+      },
+      textShadowRadius: 1,
+  },
+
+  eventText2:{
+    fontSize: 16,
+    color: '#A6F6FF',
+    fontWeight: 'bold',
+  },
+
+  eventText3:{
+    fontSize: 16,
+    color: 'white',
+    fontWeight: 'bold',
+    backgroundColor: '#DCDCDC',
+    borderRadius: 10,
+    padding: 7,
+    justifyContent: 'center',
+    alignContent: 'center',
+    marginTop: 10,
+  },
 });
 
 export default styles;

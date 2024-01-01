@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    marginTop: 110,
+    marginTop: 0,
     flex: 1,
     borderTopWidth: 2,
     borderTopColor: '#70AEFF',
@@ -71,25 +71,20 @@ const styles = StyleSheet.create({
   },
 
   eventItemContainer: {
-    //flex: 1,
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
     height: 250,
     borderColor: '#cccccc',
-    borderWidth: 0.5,
+    borderWidth: 1,
     borderRadius: 20,
     width: 300,
     backgroundColor: "#fdfdfd",
-  },
-
-
-  eventPhoto: {
-    width: '100%',
-    height: 155,
-    borderRadius: 20,
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.4,
+    shadowRadius: 4,
+    elevation: 5, // Cho Android để hiển thị bóng đổ
   },
 
 
@@ -98,7 +93,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#333333',
-    marginTop: 8
+    marginVertical: 21
   },
 
   eventInfo: {
@@ -111,6 +106,15 @@ const styles = StyleSheet.create({
        margin: 10,
        fontWeight: 'bold',
   },
+
+  eventPhoto: {
+    width: '100%',
+    height: 182,
+    borderRadius: 20,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+  },
+
 
   logo: {
   },

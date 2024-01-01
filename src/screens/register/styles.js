@@ -45,6 +45,22 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 
+  nameContainer: {
+    marginTop: 10,
+    width: '80%', // Độ rộng cố định của ô nhập Email
+    height: '10%',
+    paddingTop: 10,
+  },
+  name: {
+    width: '100%',
+    padding: 2,
+    color: 'white', // Màu chữ của ô nhập Email
+    backgroundColor: '#040832',
+    borderColor: '#E0E0E0',
+    borderWidth: 1,
+    borderRadius: 10,
+  },
+
   repasswordContainer: {
     marginTop: 10,
     width: '80%', // Độ rộng cố định của ô nhập Email

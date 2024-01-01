@@ -3,7 +3,7 @@ import { RecipeCard } from '../../AppStyles';
 
 const styles = StyleSheet.create({
   Viewcontainer: {
-    marginTop: 110,
+    marginTop: 0,
     borderTopWidth: 2,
     borderTopColor: '#70AEFF',
     flex: 1,

@@ -37,6 +37,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 10,
     backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.4,
+    shadowRadius: 4,
+    elevation: 5, // Cho Android để hiển thị bóng đổ
   },
 
   eventName: {
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
   //container: RecipeCard.container,
   photo: {
     width: '100%',
-    height: 155,
+    height: 160,
     borderWidth:1,
     borderColor: '#cccccc',
     borderRadius: 20,

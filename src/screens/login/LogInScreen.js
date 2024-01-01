@@ -1,29 +1,40 @@
 import React, { useState } from 'react'
-import { TouchableOpacity, StyleSheet, View,  Button, Image } from 'react-native'
+import { TouchableOpacity, StyleSheet, View,  Button} from 'react-native'
 import { TextInput, Text } from 'react-native-paper'
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Logo from '../login/logo'
-import { emailValidator } from '../../helpers/emailValidator'
-import { passwordValidator } from '../../helpers/passwordValidator'
-import { LinearGradient } from 'expo-linear-gradient';
+import  emailValidator  from '../../helpers/emailValidator'
+import  passwordValidator  from '../../helpers/passwordValidator'
+
+import { checkAccount } from "../../data/MockDataAPI";
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
 
   const onLoginPressed = () => {
-    //const emailError = emailValidator(email.value)
-    //const passwordError = passwordValidator(password.value)
-    //if (emailError || passwordError) {
-      //setEmail({ ...email, error: emailError })
-      //setPassword({ ...password, error: passwordError })
-      //return
-    //}
-    navigation.reset({
+    const emailError = emailValidator(email.value)
+    const passwordError = passwordValidator(password.value)
+    if (emailError || passwordError) {
+      setEmail({ ...email, error: emailError })
+      setPassword({ ...password, error: passwordError })
+      return
+    }
+    else if(!checkAccount(email.value, password.value)) {
+      setEmail({ ...email, error: 'Email hoặc mật khẩu không đúng' }) 
+      return;
+    }
+    /*navigation.reset({
       index: 0,
       routes: [{ name: 'Home' }],
-    })
+      params: {
+        // Thêm các prop của bạn vào đây
+        email: email.value,
+      },
+    })*/
+    const mail = email.value
+    navigation.navigate('Home',{email: mail});
 
   }
 
@@ -43,11 +54,6 @@ export default function LoginScreen({ navigation }) {
           autoCompleteType="email"
           textContentType="emailAddress"
           keyboardType="email-address"
-          icon={{
-            name: "envelope-envelope",
-            size: 20,
-            color: "blue",
-          }}
         />
       </View>
       <View style={styles.passwordContainer}>

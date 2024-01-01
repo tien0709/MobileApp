@@ -6,23 +6,22 @@ import HomeScreen from '../screens/Home/HomeScreen';
 import CategoriesScreen from '../screens/Categories/CategoriesScreen';
 import LocationsScreen from '../screens/Locations/LocationsScreen';
 import LocationScreen from '../screens/Location/LocationScreen';
-import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
-import IngredientScreen from '../screens/Ingredient/IngredientScreen';
-import SearchScreen from '../screens/Search/SearchScreen';
-import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
+
 import SplashScreen from '../screens/Splash/SplashScreen';
 import LoginScreen from '../screens/login/LogInScreen';
 import SignUpScreen from '../screens/register/SignUpScreen';
 import DiscoveryScreen from  '../screens/Discovery/DiscoveryScreen';
 import QRScreen from  '../screens/QR/QRScreen';
 import ContributeScreen from  '../screens/Contribute/ContributeScreen';
-import ForumScreen from  '../screens/Forum/ForumScreen';
+import ForumsScreen from  '../screens/Forums/ForumsScreen';
+import ForumCommentScreen from  '../screens/Forum_comment/ForumCommentScreen';
+import CreateStatusScreen from  '../screens/CreateStatus/CreateStatusScreen';
 import EventScreen from  '../screens/Event/EventScreen';
 import EventsScreen from  '../screens/Events/EventsScreen';
 import QRCreateScreen from  '../screens/QRCreate/QRCreateScreen';
  const Stack = createStackNavigator();
-
+ import EventRankScreen from  '../screens/Event/EventRankScreen';
 function MainNavigator() {
   return(
     <Stack.Navigator
@@ -69,7 +68,21 @@ function MainNavigator() {
         }}
       />
 
-      <Stack.Screen name='Forum' component={ForumScreen}
+      <Stack.Screen name='Forums' component={ForumsScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Forum_comment' component={ForumCommentScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      />
+
+      <Stack.Screen name='Create_Status' component={CreateStatusScreen}
         options={{
           headerShown: true,
           headerTitle: '',
@@ -103,12 +116,12 @@ function MainNavigator() {
           headerTitle: '',
         }}
       />
-
-      <Stack.Screen name='RecipesList' component={RecipesListScreen} />
-      <Stack.Screen name='Ingredient' component={IngredientScreen} />
-      <Stack.Screen name='Search' component={SearchScreen} />
-      <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen} />
-    </Stack.Navigator>
+          <Stack.Screen name='EventRank' component={EventRankScreen}
+        options={{
+          headerShown: true,
+          headerTitle: '',
+        }}
+      /></Stack.Navigator>
   )
 } 
 

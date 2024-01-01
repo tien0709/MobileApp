@@ -5,27 +5,20 @@ import {
   View,
   Image,
   Dimensions,
-  TouchableHighlight,
 } from "react-native";
 import styles from "./styles";
 import Carousel, { Pagination } from "react-native-snap-carousel";
-import {
-  getIngredientName,
-  getCategoryName,
-  getCategoryById,
-} from "../../data/MockDataAPI";
 import BackButton from "../../components/BackButton/BackButton";
 import LogoBK from "../../components/LogoBK/LogoBK";
-import ViewIngredientsButton from "../../components/ViewIngredientsButton/ViewIngredientsButton";
 import NavigationBar from "../../components/NaviBar/navibar";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const { width: viewportWidth } = Dimensions.get("window");
 
 export default function LocationScreen(props) {
   const { navigation, route } = props;
   item = route.params?.item;
-  const category = item.id;
-  const title = item.name;
+  const email = route?.params?.email;
 
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -33,13 +26,16 @@ export default function LocationScreen(props) {
   const itemTitle = item.title; // Giả sử item có thuộc tính title
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTransparent: "true",
-      headerTitleStyle: {
-        fontWeight: 'bold',
-        textAlign: 'center',
-        alignSelf: 'center',
-        flex: 1,
-      },
+      //headerTransparent: "true",
+      headerTitle: () => (
+        <View>
+          <Text style={{ fontWeight: 'bold', fontSize: 20}} textAlign="center">{ itemTitle}</Text>
+        </View>
+      ),
+      headerStyle: {
+        backgroundColor: '#fff',
+        height: 110,
+       },
       headerLeft: () => (
         <BackButton
           onPress={() => {
@@ -48,33 +44,32 @@ export default function LocationScreen(props) {
         />
       ),
       headerRight: () => <LogoBK />,
-      headerTitle: itemTitle,
     });
   }, [itemTitle]);
 
   const renderImage = ({ item }) => (
-    <TouchableHighlight>
+    <TouchableOpacity>
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={{ uri: item }} />
       </View>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 
   const handlePressButton = (buttonName) => {
     if(buttonName === 'Home'){
-      navigation.navigate("Home");
+      navigation.navigate("Home", {email});
     }
     else if(buttonName === 'Discovery'){
-      navigation.navigate("Discovery");
+      navigation.navigate("Discovery", {email});
     }
     else if(buttonName === 'QR'){
-      navigation.navigate("QR");
+      navigation.navigate("QR", {email});
     }
-    else if(buttonName === 'Forum'){
-      navigation.navigate("Forum");
+    else if(buttonName === 'Forums'){
+      navigation.navigate("Forums", {email});
     }
     else if(buttonName === 'Contibute'){
-      navigation.navigate("Contribute");
+      navigation.navigate("Contribute", {email});
     }
 };
 
