@@ -3,7 +3,7 @@
 # Project Name
 
 BKDiscovery - A mobile App for discovering HCMUT.</br>
-<div style="text-align:center; background-color: #f5f5f5;">
+<div style="text-align:center; background-color: red;">
 <img src = "https://github.com/tien0709/MobileApp/blob/main/assets/1.jpg" width="400" height="800" style="border: 1px solid red;>
 <img src = "https://github.com/tien0709/MobileApp/blob/main/assets/1.jpg"width="400" height="800" style="border: 1px solid red;">
 <img src = "https://github.com/tien0709/MobileApp/blob/main/assets/2.jpg"width="400" height="800" style="border: 1px solid red;">
