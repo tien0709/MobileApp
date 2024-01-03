@@ -4,7 +4,7 @@
 
 BKDiscovery - A mobile App for discovering HCMUT.</br>
 
-# IMAGE FOR PROJECT 
+# Image Of Project
 
   <div >
     <img src = "https://github.com/tien0709/MobileApp/blob/main/assets/1.jpg" width="250" height="500" >
